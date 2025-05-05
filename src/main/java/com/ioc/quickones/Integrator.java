@@ -15,9 +15,14 @@ public class Integrator {
     Activity activity2;
     
     
+    @Autowired
+    Activity activity3;
+    
+    
     public void fun() {
     	System.out.println("Integrator running");
     	activity.perform();
         activity2.perform();
+        activity3.perform();
     }
 }
