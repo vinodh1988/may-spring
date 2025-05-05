@@ -15,6 +15,10 @@ public class IocDemoApplication {
 	
      Integrator o = (Integrator)		ac.getBean("central");
 		o.fun();
+		System.out.println(o.hashCode());
+	    o = (Integrator)		ac.getBean("central");
+			o.fun();
+	    System.out.println(o.hashCode());
 		/*
 	 Task t=	(Task)ac.getBean("paint");
 	 t.doit();

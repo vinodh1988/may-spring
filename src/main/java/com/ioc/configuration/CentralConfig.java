@@ -2,6 +2,7 @@ package com.ioc.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import com.ioc.quickones.Cleaning;
 import com.ioc.quickones.Integrator;
@@ -27,6 +28,7 @@ public class CentralConfig {
 	
 	
 	@Bean("central")
+	//@Scope("prototype")
 	public Integrator getObject() {
 		return new Integrator();
 	}
