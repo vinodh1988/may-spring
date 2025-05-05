@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.ioc.quickones.Cleaning;
+import com.ioc.quickones.Integrator;
 import com.ioc.quickones.Painting;
 import com.ioc.quickones.Task;
 
@@ -23,4 +24,12 @@ public class CentralConfig {
 	public Task getCleaning() {
 		return new Cleaning();
 	}
+	
+	
+	@Bean("central")
+	public Integrator getObject() {
+		return new Integrator();
+	}
+	
+	
 }
